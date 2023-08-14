@@ -22,7 +22,7 @@
     </div>
     <div class="pencil-tool-cont">
         <div class="pencil-width-cont">
-            <input type="range" min = "2" max = "10" value = "10">
+            <input type="range" min = "2" max = "10" value = "3" class = "pencil-width">
         </div>
         <div class="pencil-color-cont">
             <div class="black pencil-color"></div>
@@ -31,9 +31,14 @@
         </div>
     </div>
     <div class="eraser-tool-cont">
-        <input type="range" min="2" max="10" value="3">
+        <input type="range" min="2" max="10" value="3" class = "eraser-width">
     </div>
     <canvas></canvas>
+    <script src="https://cdn.socket.io/3.1.3/socket.io.min.js" 
+    integrity="sha384-cPwlPLvBTa3sKAgddT6krw0cJat7egBga3DJepJyrLl4Q9/5WLra3rrnMcyTyOnh" crossorigin="anonymous"></script>
+    <script>
+        let socket = io.connect("http://localhost:3000");
+    </script>
     <script src="./tools.js"></script>  
     <script src="./canvas.js"></script>  
 </body>
